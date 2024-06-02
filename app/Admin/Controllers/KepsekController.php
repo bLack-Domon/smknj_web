@@ -28,6 +28,7 @@ class KepsekController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('nama', __('Nama'));
+        $grid->column('masa_jabatan', __('Masa jabatan'));
         $grid->column('foto')->image();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -47,6 +48,7 @@ class KepsekController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('nama', __('Nama'));
+        $show->field('masa_jabatan', __('Masa jabatan'));
         $show->field('foto')->image();
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -64,7 +66,11 @@ class KepsekController extends AdminController
         $form = new Form(new Kepsek());
 
         $form->text('nama', __('Nama'));
-        $form->image('foto', __('Foto'));
+        $form->image('foto', 'Foto')
+            ->move('images/kepala_sekolah')
+            ->uniqueName()
+            ->rules('mimes:jpeg,jpg,png|max:2048');
+        $form->text('masa_jabatan', __('Masa jabatan'));
 
         return $form;
     }

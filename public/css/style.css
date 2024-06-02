@@ -6,9 +6,22 @@
 }
 
 .logo-smk{
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 5px;
+    display: none;
+}
+
+.full-message {
+    display: none;
+}
+.testimonial-text:hover .short-message {
+    display: none;
+}
+.testimonial-text:hover .full-message {
+    display: block;
+}
+
+.navbar .navbar-brand img{
+    width: 65px;
+    height: 65px;
 }
 
 .fw-medium {
@@ -172,9 +185,41 @@
     }
 
     .logo-smk{
+        display: flex;
         position: absolute;
-        margin-top: 5px;
-        margin-left: 5px;
+        margin-top: -45px;
+        margin-left: 75px;
+        font-size: 30px;
+    }
+
+    .foto_kepsek{
+        object-position: top;
+    }
+}
+/*** Header carousel ***/
+@media (max-width: 580px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .logo-smk{
+        display: flex;
+        position: absolute;
+        margin-top: -35px;
+        margin-left: 65px;
+        font-size: 15px;
+    }
+
+    .foto_kepsek{
+        object-position: top;
     }
 }
 
@@ -209,7 +254,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/slider1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

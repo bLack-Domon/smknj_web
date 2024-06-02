@@ -28,7 +28,9 @@ class JurusanController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('nama', __('Nama'));
-        $grid->column('status', __('Status'));
+        $grid->column('singkatan', __('Singkatan'));
+        $grid->column('deskripsi', __('Deskripsi'));
+        $grid->column('foto', __('Foto'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -47,7 +49,9 @@ class JurusanController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('nama', __('Nama'));
-        $show->field('status', __('Status'));
+        $show->field('deskripsi', __('Deskripsi'));
+        $show->field('singkatan', __('Singkatan'));
+        $show->field('foto', __('Foto'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -64,7 +68,9 @@ class JurusanController extends AdminController
         $form = new Form(new Jurusan());
 
         $form->text('nama', __('Nama'));
-        $form->text('status', __('Status'));
+        $form->text('singkatan', __('Singkatan'));
+        $form->textarea('deskripsi', __('Deskripsi'));
+        $form->image('foto', 'Foto');
 
         return $form;
     }
