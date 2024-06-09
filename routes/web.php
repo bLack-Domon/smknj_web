@@ -29,6 +29,7 @@ Route::get('program-keahlian', [ProgramSMKNJController::class, 'keahlian'])->nam
 
 // alumni
 
+Route::get('galeri-foto', [GaleriController::class, 'foto'])->name('galeri.foto');
 Route::get('galeri-video', [GaleriController::class, 'video'])->name('galeri.video');
 
 Route::get('daftar-berita', [BeritaController::class, 'index'])->name('berita-sekolah');
@@ -37,3 +38,4 @@ Route::get('detail-berita/{id}', [BeritaController::class, 'detail_berita'])->na
 Route::get('kontak', function () {
     return view('kontak');
 })->name('kontak_kami');
+

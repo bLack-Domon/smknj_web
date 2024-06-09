@@ -23,4 +23,5 @@ Route::group([
     $router->resource('gavideos', GavideoController::class);
     $router->resource('ekstrakurikulers', EkstrakurikulerController::class);
     $router->resource('gafotos', GafotoController::class);
+    $router->resource('alumnis', AlumniController::class);
 });

@@ -9,6 +9,10 @@
     display: none;
 }
 
+.foto_kepsek{
+    object-position: top;
+}
+
 .full-message {
     display: none;
 }

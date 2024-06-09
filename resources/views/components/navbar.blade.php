@@ -28,7 +28,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('galeri.*') ? 'text-primary' : '' }}" data-bs-toggle="dropdown">Galeri</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">Foto</a>
+                        <a href="{{ route('galeri.foto') }}" class="dropdown-item {{ Request::routeIs('galeri.video') ? 'text-primary' : '' }}">Foto</a>
                         <a href="{{ route('galeri.video') }}" class="dropdown-item {{ Request::routeIs('galeri.video') ? 'text-primary' : '' }}">Video</a>
                         <a href="#" class="dropdown-item">Fasilitas</a>
                     </div>

@@ -15,7 +15,7 @@
                 <p class="">{!! nl2br(e($b->kalimat)) !!}</p>
             </div>
             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="{{ asset($b->foto) }}" alt="" class="w-100 h-100" style="border-radius: 15px">
+                <img src="{{ asset('storage/'.$b->foto) }}" alt="" class="w-100 h-100" style="border-radius: 15px">
             </div>
             @endforeach
         </div>

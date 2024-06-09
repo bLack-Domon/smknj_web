@@ -7,7 +7,7 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 @foreach ($katalum as $k)
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{{ asset ($k->foto) }}" style="width: 200px; height: 200px;">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{{ asset ('storage/'.$k->foto) }}" style="width: 200px; height: 200px;">
                     <h5 class="mb-0">{{ $k->nama }}</h5>
                     <p>{{ $k->pekerjaan }}</p>
                     <div class="testimonial-text bg-light text-center p-4">

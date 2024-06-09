@@ -14,7 +14,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="{{ asset ($b->foto) }}" alt="">
+                        <img class="img" height="300px;" width="auto" src="{{ asset ('storage/'.$b->foto) }}" alt="">
                     </div>
                     <div class="text-end p-4 pb-0">
                         <div class="mb-3">

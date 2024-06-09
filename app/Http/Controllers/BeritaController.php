@@ -13,7 +13,7 @@ class BeritaController extends Controller
     }
     
     public function detail_berita($id) {
-        $berita = Berita::findOrFail($id)->get();
+        $berita = Berita::findOrFail($id);
         // dd($berita);
         return view('detail-berita', compact('berita'));
     }
