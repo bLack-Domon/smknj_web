@@ -13,8 +13,8 @@
             @foreach ($berita as $b)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img" height="300px;" width="auto" src="{{ asset ('storage/'.$b->foto) }}" alt="">
+                    <div class="position-relative overflow-hidden" style="display: flex; justify-content: center; align-items: center;">
+                        <img class="img" src="{{ asset ('storage/'.$b->foto) }}" alt="" height="300px;" width="auto">
                     </div>
                     <div class="text-end p-4 pb-0">
                         <div class="mb-3">
@@ -38,6 +38,10 @@
                 </div>
             </div>
             @endforeach
+            <div class="d-flex justify-content-center">
+                {{ $berita->links('pagination::bootstrap-4') }}
+            </div>
+
         </div>
     </div>
 </div>

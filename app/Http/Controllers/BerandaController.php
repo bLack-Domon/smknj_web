@@ -14,7 +14,7 @@ class BerandaController extends Controller
     public function index() {
         $layanan = Layanan::all();
         $kepsek = Kepsek::all();
-        $berita = Berita::all();
+        $berita = Berita::latest()->take(6)->get();
         $video = Gavideo::all();
         $katalum = KataAlumni::all();
 
