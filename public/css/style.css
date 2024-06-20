@@ -1,15 +1,58 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
-    --light: #F0FBFC;
+    --primary: #06bbcc;
+    --light: #f0fbfc;
     --dark: #181d38;
 }
 
-.logo-smk{
+.horizontal-timeline .items {
+    border-top: 3px solid #e9ecef;
+}
+
+.horizontal-timeline .items .items-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    margin-right: 0;
+}
+
+.horizontal-timeline .items .items-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
+}
+
+.horizontal-timeline .items .items-list .event-date {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    width: 175px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    padding-top: 8px;
+}
+
+@media (min-width: 1140px) {
+    .horizontal-timeline .items .items-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+
+    .horizontal-timeline .items .items-list .event-date {
+        top: -40px;
+    }
+}
+
+.logo-smk {
     display: none;
 }
 
-.foto_kepsek{
+.foto_kepsek {
     object-position: top;
 }
 
@@ -23,7 +66,7 @@
     display: block;
 }
 
-.navbar .navbar-brand img{
+.navbar .navbar-brand img {
     width: 65px;
     height: 65px;
 }
@@ -44,32 +87,30 @@
     z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
     z-index: 99999;
 }
 
 #spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
 }
 
-
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 600;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .btn.btn-primary,
 .btn.btn-secondary {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .btn-square {
@@ -98,7 +139,6 @@
     border-radius: 0px;
 }
 
-
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
@@ -112,7 +152,7 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -124,13 +164,13 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
 
     .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
+        border-top: 1px solid #eeeeee;
     }
 }
 
@@ -146,7 +186,7 @@
 
 .navbar-light.sticky-top {
     top: -100px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 @media (min-width: 992px) {
@@ -155,7 +195,7 @@
         margin-top: 0;
         opacity: 0;
         visibility: hidden;
-        transition: .5s;
+        transition: 0.5s;
     }
 
     .navbar .dropdown-menu.fade-down {
@@ -168,11 +208,10 @@
         top: 100%;
         transform: rotateX(0deg);
         visibility: visible;
-        transition: .5s;
+        transition: 0.5s;
         opacity: 1;
     }
 }
-
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
@@ -180,7 +219,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -188,7 +227,7 @@
         object-fit: cover;
     }
 
-    .logo-smk{
+    .logo-smk {
         display: flex;
         position: absolute;
         margin-top: -45px;
@@ -196,7 +235,7 @@
         font-size: 30px;
     }
 
-    .foto_kepsek{
+    .foto_kepsek {
         object-position: top;
     }
 }
@@ -206,7 +245,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -214,7 +253,7 @@
         object-fit: cover;
     }
 
-    .logo-smk{
+    .logo-smk {
         display: flex;
         position: absolute;
         margin-top: -35px;
@@ -222,7 +261,7 @@
         font-size: 15px;
     }
 
-    .foto_kepsek{
+    .foto_kepsek {
         object-position: top;
     }
 }
@@ -244,11 +283,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #ffffff;
     background: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     font-size: 22px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .header-carousel .owl-nav .owl-prev:hover,
@@ -258,20 +297,20 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/slider1.jpg);
+    background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
+        url(../img/slider1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-header-inner {
-    background: rgba(15, 23, 43, .7);
+    background: rgba(15, 23, 43, 0.7);
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--light);
 }
-
 
 /*** Section Title ***/
 .section-title {
@@ -312,11 +351,10 @@
     left: 0;
 }
 
-
 /*** Service ***/
 .service-item {
     background: var(--light);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service-item:hover {
@@ -325,18 +363,17 @@
 }
 
 .service-item * {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service-item:hover * {
     color: var(--light) !important;
 }
 
-
 /*** Categories & Courses ***/
 .category img,
 .course-item img {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .category a:hover img,
@@ -344,16 +381,14 @@
     transform: scale(1.1);
 }
 
-
 /*** Team ***/
 .team-item img {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .team-item:hover img {
     transform: scale(1.1);
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
@@ -363,7 +398,11 @@
     left: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
     z-index: 1;
 }
 
@@ -374,7 +413,11 @@
     right: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
     z-index: 1;
 }
 
@@ -394,7 +437,7 @@
 
 .testimonial-carousel .owl-item .testimonial-text,
 .testimonial-carousel .owl-item.center .testimonial-text * {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
@@ -402,7 +445,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text * {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 
 .testimonial-carousel .owl-dots {
@@ -418,15 +461,14 @@
     margin: 0 5px;
     width: 15px;
     height: 15px;
-    border: 1px solid #CCCCCC;
-    transition: .5s;
+    border: 1px solid #cccccc;
+    transition: 0.5s;
 }
 
 .testimonial-carousel .owl-dot.active {
     background: var(--primary);
     border-color: var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -438,9 +480,9 @@
     justify-content: center;
     color: var(--light);
     font-weight: normal;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     border-radius: 35px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .footer .btn.btn-social:hover {
@@ -452,11 +494,11 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .footer .btn.btn-link::before {
@@ -475,7 +517,7 @@
 .footer .copyright {
     padding: 25px 0;
     font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
 }
 
 .footer .copyright a {
@@ -485,7 +527,7 @@
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-menu a:last-child {

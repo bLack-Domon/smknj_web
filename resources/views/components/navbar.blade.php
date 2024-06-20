@@ -24,7 +24,7 @@
                         <a href="#" class="dropdown-item">Ekstrakurikuler</a>
                     </div>
                 </div>
-                <a href="#" class="nav-item nav-link">Alumni</a>
+                <a href="{{ route('alumni') }}" class="nav-item nav-link {{ Request::routeIs('alumni') ? 'active' : '' }}">Alumni</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('galeri.*') ? 'text-primary' : '' }}" data-bs-toggle="dropdown">Galeri</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -37,7 +37,7 @@
                 <a href="#" class="nav-item nav-link">Pengumuman</a>
                 <a href="#" class="nav-item nav-link">Download</a>
                 <a href="{{ route('kontak_kami') }}" class="nav-item nav-link {{ Request::routeIs('kontak_kami') ? 'active' : '' }}">Kontak</a>
+                <a href="{{ route('ppdb') }}" class="nav-item nav-link {{ Request::routeIs('ppdb') ? 'active' : '' }}">PPDB</a>
             </div>
-            <a href="https://psb.nuruljadid.net" target="_blank" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">PPDB<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>

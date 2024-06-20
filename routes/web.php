@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumniSmkController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
@@ -28,6 +29,7 @@ Route::get('identitas-smknj', [ProfilSMKNJController::class, 'identitas'])->name
 Route::get('program-keahlian', [ProgramSMKNJController::class, 'keahlian'])->name('program.keahlian');
 
 // alumni
+Route::get('alumni-smknj', [AlumniSmkController::class, 'tracer_study'])->name('alumni');
 
 Route::get('galeri-foto', [GaleriController::class, 'foto'])->name('galeri.foto');
 Route::get('galeri-video', [GaleriController::class, 'video'])->name('galeri.video');
@@ -39,3 +41,6 @@ Route::get('kontak', function () {
     return view('kontak');
 })->name('kontak_kami');
 
+Route::get('ppdb-smknj', function(){
+    return view('info_ppdb');
+})->name('ppdb');
