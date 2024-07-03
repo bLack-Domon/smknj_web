@@ -31,6 +31,10 @@ Route::get('program-keahlian', [ProgramSMKNJController::class, 'keahlian'])->nam
 // alumni
 Route::get('alumni-smknj', [AlumniSmkController::class, 'tracer_study'])->name('alumni');
 
+Route::get('alumni-smknj/change_status/{id}', [AlumniSmkController::class, 'status_kehadiran'])->name('change_status');
+Route::put('alumni-smknj/update_status/{id}', [AlumniSmkController::class, 'update_status'])->name('update_status');
+Route::put('alumni-smknj/updateNisn/{id}', [AlumniSmkController::class, 'updateNisn'])->name('updateNisn');
+
 Route::get('galeri-foto', [GaleriController::class, 'foto'])->name('galeri.foto');
 Route::get('galeri-video', [GaleriController::class, 'video'])->name('galeri.video');
 
